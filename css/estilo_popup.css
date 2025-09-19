@@ -136,3 +136,28 @@
     border: none;
     box-shadow: 0 3px 10px -2px rgba(0,0,0,0.1);
 }
+/* =================================================================== */
+/* ======== AJUSTES DE RESPONSIVIDADE (CÓDIGO DE SEGURANÇA) ========= */
+/* =================================================================== */
+
+@media (max-width: 480px) {
+
+    /* Regra 1: Força o container principal do Leaflet a não ter largura máxima */
+    .leaflet-popup-content {
+        max-width: none !important;
+    }
+
+    /* Regra 2: Aplica a largura flexível ao nosso container personalizado */
+    .popup-container {
+        width: 90vw !important;
+        max-width: 320px;
+    }
+    
+    /* Opcional: Ajustes de fonte */
+    .popup-title {
+        font-size: 1.1em;
+    }
+    .info-block span {
+        font-size: 0.95em;
+    }
+}
