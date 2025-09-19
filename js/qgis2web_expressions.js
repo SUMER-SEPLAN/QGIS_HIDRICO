@@ -1277,7 +1277,85 @@ function exp_CrescimentopercentualdasCisternas2023a2025_78rule5_eval_expression(
 }
 
 
-function exp_Decreton23756DE30042025_79rule0_eval_expression(context) {
+function exp_EmergnciaporSeca_79rule0_eval_expression(context) {
+    // Fonte = 'Decreto'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  == 'Decreto');
+    } else {
+        return (feature['Fonte']  == 'Decreto');
+    }
+}
+
+
+function exp_EmergnciaporSeca_79rule1_eval_expression(context) {
+    // Fonte = 'Decreto, COMDEC, S2iD'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  == 'Decreto, COMDEC, S2iD');
+    } else {
+        return (feature['Fonte']  == 'Decreto, COMDEC, S2iD');
+    }
+}
+
+
+function exp_EmergnciaporSeca_79rule2_eval_expression(context) {
+    // Fonte = 'Decreto, COMDEC, S2iD, Exército'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  == 'Decreto, COMDEC, S2iD, Exército');
+    } else {
+        return (feature['Fonte']  == 'Decreto, COMDEC, S2iD, Exército');
+    }
+}
+
+
+function exp_EmergnciaporSeca_79rule3_eval_expression(context) {
+    // Fonte = 'Decreto, S2iD'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  == 'Decreto, S2iD');
+    } else {
+        return (feature['Fonte']  == 'Decreto, S2iD');
+    }
+}
+
+
+function exp_EmergnciaporSeca_79rule4_eval_expression(context) {
+    // Fonte = 'Decreto, S2iD, Exército'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  == 'Decreto, S2iD, Exército');
+    } else {
+        return (feature['Fonte']  == 'Decreto, S2iD, Exército');
+    }
+}
+
+
+function exp_EmergnciaporSeca_79rule5_eval_expression(context) {
+    // Fonte IS NULL
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (feature.properties['Fonte']  === null);
+    } else {
+        return (feature['Fonte']  === null);
+    }
+}
+
+
+function exp_Decreton23756DE30042025_80rule0_eval_expression(context) {
     // "Situação de emergência em decorrência da seca" IS NOT NULL
 
     var feature = context.feature;
@@ -1290,7 +1368,7 @@ function exp_Decreton23756DE30042025_79rule0_eval_expression(context) {
 }
 
 
-function exp_S2iD_80rule0_eval_expression(context) {
+function exp_S2iD_81rule0_eval_expression(context) {
     // "Cobrade Tipo" IS NOT NULL
 
     var feature = context.feature;

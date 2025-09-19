@@ -1,0 +1,35 @@
+/* css/estilo.css */
+
+/* Estilo para o container da legenda */
+.legenda-container {
+    /* Posicionamento fixo no canto inferior esquerdo do mapa */
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    
+    /* Z-index alto para garantir que fique sobre o mapa */
+    z-index: 9000; 
+    
+    /* Esconde a legenda por padrão */
+    display: none; 
+    
+    /* Estilos visuais */
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidade */
+    max-width: 230px; /* Largura máxima para não ficar muito grande */
+}
+
+/* Classe que será usada pelo JavaScript para mostrar a legenda */
+.legenda-visivel {
+    display: block !important;
+}
+
+/* Garante que a imagem dentro do container se ajuste bem */
+.legenda-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
