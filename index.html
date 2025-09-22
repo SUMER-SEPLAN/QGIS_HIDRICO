@@ -15,6 +15,7 @@
         <link rel="icon" href="images/dados_pi.png" type="image/png"> <!-- Usar no novo projeto linha unica -->
         <link rel="stylesheet" href="css/estilo.css"> <!-- Usar no novo projeto linha unica -->
         <link rel="stylesheet" href="css/estilo_popup.css"><!-- Usar no novo projeto linha unica -->
+        <link rel="stylesheet" href="css/botao-fechar-mobile.css"> <!-- Usar no novo projeto linha unica -->
         <style>
         html, body, #map {
             width: 100%;
@@ -12467,5 +12468,33 @@ document.addEventListener('change', function(e) {
             }
             setTimeout(loadBackgroundLayers, 500);
         </script>
-    </body>
+    ...
+        setTimeout(loadBackgroundLayers, 500);
+    </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // MUDANÇA 1: Agora selecionamos o container PRINCIPAL do menu.
+        const menuContainer = document.querySelector('.leaflet-control-layers');
+        
+        if (menuContainer && typeof lay !== 'undefined') {
+            // A criação do botão continua igual
+            const botaoFechar = document.createElement('div');
+            botaoFechar.id = 'fechar-menu-interno';
+            botaoFechar.innerHTML = '&times;'; 
+
+            // MUDANÇA 2: Adicionamos o botão ao container principal, não à lista.
+            // Isso o deixa "fora" da área de rolagem.
+            menuContainer.appendChild(botaoFechar);
+
+            // A funcionalidade de clique continua a mesma
+            botaoFechar.addEventListener('click', function(e) {
+                e.stopPropagation();
+                lay.collapse(); 
+            });
+        }
+    });
+</script>
+
+</body>
 </html>
